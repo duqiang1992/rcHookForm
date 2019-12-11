@@ -3,12 +3,21 @@
 
 ##### 使用
 
+###### 安装
+
+```
+ yarn add rh-hook-form
+
+```
+
 * 目前默认在onchange时候做了表单验证
 
 ```
 import React, { useRef, useState } from 'react';
 
-import { Form, FormItem } from '@components/form/index.js';
+import rcHookForm from 'rc-hook-form';
+
+const { Form, FormItem } = rcHookForm;
 
 const rules = {
   name: [
