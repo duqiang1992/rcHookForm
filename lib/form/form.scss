@@ -1,0 +1,96 @@
+.xtForm {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  & :global {
+    .form-item {
+      display: flex;
+      flex-direction: row;
+      margin-right: 20px;
+      margin-bottom: 30px;
+      font-size: 14px;
+      color: #333333;
+
+      .form-item-label {
+        min-width: 100px;
+        height: 36px;
+        margin-right: 20px;
+        font-size: 14px;
+        line-height: 36px;
+        color: #333333;
+
+        &.require::before {
+          display: inline-block;
+          height: 100%;
+          margin-right: 10px;
+          color: red;
+          vertical-align: middle;
+          content: '*';
+        }
+      }
+
+      .form-item-content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        &.line-desc {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .input-desc {
+            margin-top: 0;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .errMsg {
+        margin-right: 10px;
+        font-size: 12px;
+        line-height: 15px;
+        color: red;
+      }
+
+      .validateErr {
+        border: 1px solid red;
+      }
+    }
+  }
+}
+
+.top {
+  & :global {
+    .form-item {
+      display: flex;
+      flex-direction: column;
+
+      .form-item-label {
+        margin-bottom: 10px;
+      }
+
+      .errMsg {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.left {
+  & :global {
+    .form-item {
+      text-align: left;
+    }
+  }
+}
+
+.right {
+  & :global {
+    .form-item {
+      align-items: center;
+      text-align: right;
+    }
+  }
+}
