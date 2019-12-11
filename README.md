@@ -17,6 +17,8 @@ import React, { useRef, useState } from 'react';
 
 import rcHookForm from 'rc-hook-form';
 
+import "rc-hook-form/dist/index.css";
+
 const { Form, FormItem } = rcHookForm;
 
 const rules = {
